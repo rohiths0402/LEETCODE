@@ -12,7 +12,7 @@ int hash(int x){
 bool containsDuplicate(int* nums, int numsSize) {
    Node* table[TABLE_SIZE] = {0};
     for(int i = 0; i < numsSize; i++){
-        unsigned int idx = hash(nums[i]);
+        int idx = hash(nums[i]);
         Node* cur = table[idx];
         while(cur){
             if (cur->val == nums[i]) return true;
